@@ -3,7 +3,7 @@ let upstream =
         sha256:96d5db51eb6ce51906b52377d615fcdca3528ac05e0dc58e71ace8bbaceac108
 
 in  upstream
-      with node-event-emitter.version = "v2.0.0"
+      with node-event-emitter.version = "7da1c367c338be31fb05e22078e8edc5489904e2"
       with node-event-emitter.dependencies =
         [ "effect"
         , "either"
@@ -11,7 +11,7 @@ in  upstream
         , "prelude"
         , "unsafe-coerce" 
         ]
-      with node-streams.version = "eb31fe5d4040d5da4b4143c9f33d11a3ab1a9bdd"
+      with node-streams.version = "4e12ea5fbd06923c8f2e24b4fa194236b2fabaae"
       with node-streams.dependencies =
         [ "effect"
         , "exceptions"
@@ -22,7 +22,7 @@ in  upstream
         , "prelude"
         , "unsafe-coerce"
         ]
-      with node-net.version = "4d408a3b5f1025f56f5c1e97cb6f833a8f04651b"
+      with node-net.version = "df7d82991fdf17c0d213c1e202fbb940ea3150e2"
       with node-net.dependencies =
         [ "console"
         , "datetime"
