@@ -1,5 +1,5 @@
 module Node.TLS.Socket
-  ( toDuplex
+  ( toTcpSocket
   , newClientTlsSocket
   , newClientTlsSocket'
   , newServerTlsSocket
@@ -44,15 +44,14 @@ import Foreign (Foreign)
 import Node.Buffer (Buffer)
 import Node.EventEmitter (EventHandle(..))
 import Node.EventEmitter.UtilTypes (EventHandle1, EventHandle0)
-import Node.Net.Types (Socket, TCP, ConnectTcpOptions)
-import Node.Stream (Duplex)
+import Node.Net.Types (ConnectTcpOptions, Socket, TCP)
 import Node.TLS.Types (CipherObject, Client, ConnectTlsSocketOptions, CreateSecureContextOptions, EphemeralKeyInfoDH, EphemeralKeyInfoECDH, NewTlsSocketOptions, Server, TlsSocket)
 import Partial.Unsafe (unsafeCrashWith)
 import Prim.Row as Row
 import Unsafe.Coerce (unsafeCoerce)
 
-toDuplex :: forall endpoint. TlsSocket endpoint -> Duplex
-toDuplex = unsafeCoerce
+toTcpSocket :: forall endpoint. TlsSocket endpoint -> Socket TCP
+toTcpSocket = unsafeCoerce
 
 newClientTlsSocket :: Socket TCP -> Effect (TlsSocket Client)
 newClientTlsSocket s = runEffectFn1 newTlsSocketImpl s
