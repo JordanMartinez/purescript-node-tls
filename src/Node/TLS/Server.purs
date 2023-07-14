@@ -1,5 +1,5 @@
 module Node.TLS.Server
-  ( toNetServer
+  ( toTcpServer
   , createServer
   , createServer'
   , keylogHandle
@@ -30,8 +30,8 @@ import Node.TLS.Types (CreateSecureContextOptions, Server, TlsCreateServerOption
 import Prim.Row as Row
 import Unsafe.Coerce (unsafeCoerce)
 
-toNetServer :: TlsServer -> NetTypes.Server NetTypes.TCP
-toNetServer = unsafeCoerce
+toTcpServer :: TlsServer -> NetTypes.Server NetTypes.TCP
+toTcpServer = unsafeCoerce
 
 foreign import createServer :: Effect (TlsServer)
 
