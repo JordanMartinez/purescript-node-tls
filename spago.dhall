@@ -9,7 +9,6 @@
   , "node-buffer"
   , "node-event-emitter"
   , "node-net"
-  , "node-streams"
   , "nullable"
   , "partial"
   , "prelude"
