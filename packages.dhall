@@ -13,7 +13,7 @@ in  upstream
         , "prelude"
         , "unsafe-coerce"
         ]
-      with node-streams.version = "v8.0.0"
+      with node-streams.version = "v9.0.0"
       with node-streams.dependencies =
         [ "aff"
         , "effect"
@@ -25,7 +25,7 @@ in  upstream
         , "prelude"
         , "unsafe-coerce"
         ]
-      with node-fs.version = "v9.0.0"
+      with node-fs.version = "v9.1.0"
       with node-fs.dependencies =
         [ "datetime"
         , "effect"
@@ -45,7 +45,7 @@ in  upstream
         , "strings"
         , "unsafe-coerce"
         ]
-      with node-net.version = "v5.0.0"
+      with node-net.version = "v5.1.0"
       with node-net.dependencies =
         [ "console"
         , "datetime"
