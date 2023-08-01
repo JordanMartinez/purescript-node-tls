@@ -13,6 +13,15 @@ in  upstream
         , "prelude"
         , "unsafe-coerce"
         ]
+      with node-buffer.version = "v9.0.0"
+      with node-buffer.dependencies =
+        [ "arraybuffer-types"
+        , "effect"
+        , "maybe"
+        , "st"
+        , "unsafe-coerce"
+        , "nullable"
+        ]
       with node-streams.version = "v9.0.0"
       with node-streams.dependencies =
         [ "aff"
